@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<!--parent bean is used to share common property-->
+    <bean class="six_Bean_Inheritance.points" id="parentBean">
+        <property name="x" value="5"></property>
+    </bean>
+
+    <bean class="six_Bean_Inheritance.points" id="pointsA" parent="parentBean">
+
+        <property name="y" value="10"></property>
+        <property name="z" value="20"></property>
+    </bean>
+
+
+    <bean class="six_Bean_Inheritance.points" id="pointsB" parent="parentBean">
+
+        <property name="y" value="35"></property>
+        <property name="z" value="45"></property>
+    </bean>
+    <bean class="six_Bean_Inheritance.points" id="pointsC" parent="parentBean">
+
+        <property name="y" value="15"></property>
+        <property name="z" value="25"></property>
+    </bean>
+
+    <bean class="six_Bean_Inheritance.Triangle">
+        <property name="a" ref="pointsA"></property>
+        <property name="b" ref="pointsB"></property>
+        <property name="c" ref="pointsC"></property>
+    </bean>
+
+
+
+</beans>

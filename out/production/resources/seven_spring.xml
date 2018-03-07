@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="seven_LifeCycle_Callback_By_interface.sample">
+        <property name="x" value="10"></property>
+    </bean>
+
+
+    <bean class="seven_LifeCycle_Callback_By_interface.Tea" id="teaBean"></bean>
+    <bean class="seven_LifeCycle_Callback_By_interface.ExpressTea" id="expressTeaBean"></bean>
+
+    <bean id="restaurant1" class="seven_LifeCycle_Callback_By_interface.Restaurant">
+
+        <property name="hotDrink" ref="teaBean"></property>
+        <property name="hotDrinkx" ref="expressTeaBean"></property>
+    </bean>
+
+
+
+</beans>

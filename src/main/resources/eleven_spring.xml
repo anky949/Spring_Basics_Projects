@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+<!--above bean is used to support @Autowire annotation-->
+
+    <bean class="eleven_Autowire_annotation.Tea" id="teaBean"></bean>
+    <bean class="eleven_Autowire_annotation.Restaurant" id="restaurant1">
+
+    </bean>
+
+</beans>

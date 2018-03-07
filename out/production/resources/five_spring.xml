@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+     <!--autowire by name-->
+    <!--<bean class="five_Bean_Autowiring.Tea" id="teaBean" name="hotDrink"></bean>
+    <bean class="five_Bean_Autowiring.ExpressTea" name="hotDrinkx" id="expressTeaBean"></bean>
+
+    <bean class="five_Bean_Autowiring.Restaurant" autowire="byName">
+    </bean>
+-->
+
+    <!--ByType: Allows a property to be autowired if exactly one bean of the property type exists in the container.
+    so,there should only one bean of Tea or Express Tea-->
+
+    <bean class="five_Bean_Autowiring.ExpressTea" id="expressTeaBean"></bean>
+
+    <bean class="five_Bean_Autowiring.Restaurant" autowire="byType"></bean>
+
+
+
+
+
+</beans>

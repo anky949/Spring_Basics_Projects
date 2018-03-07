@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="restaurant1" class="three_Inner_Bean.Restaurant">
+    <property name="orderNo" value="5"></property>
+    <property name="hotDrink">
+        <bean class="three_Inner_Bean.Tea" id="teaBean"></bean>
+    </property>
+</bean>
+
+
+    <!--<bean id="restaurant2" class="three_Inner_Bean.Restaurant">
+        <property name="orderNo" value="30"></property>
+        <property name="hotDrink" ref="teaBean"></property> // this line will create error because teaBean is inner bean of restaurant1 so restaurant 2 can't access it
+    </bean>-->
+</beans>
